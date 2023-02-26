@@ -1,33 +1,16 @@
 # devops-netology
-В каталоге Terraform будем игнорировать файлы:
-- состояний
-- логов падений
-- с конфиденциальными данными
-- переопределения (?)
-- конфигурации CLI
 
-Будем игнорировать содержимое каталога ".terraform", где бы он не находился:\
-**/.terraform/*
+После подготовки файла merge.sh и изменения main:
+![](img/02-git-03-branching-1.png)
 
-В текущем каталоге будем игнорировать:
-- файлы с расширением ".tfstate" (или если расширение начинается на ".tfstate"):\
-*.tfstate\
-*.tfstate.*
+После добавления ветки git-rebase:
+![](img/02-git-03-branching-2.png)
 
-- файл "crash.log" и файлы, которые начинаются на "crash." и заканчиваются на ".log":\
-crash.log\
-crash.*.log
+Во время выполнения merge была использована стратегия ort, а не recursive, как в курсе. Почему-то не работает git push. Приходится выполнять git push origin main. Результат:
+![](img/02-git-03-branching-3.png)
 
-- файлы с расширением ".tfvars" и ".tfvars.json"\
-*.tfvars\
-*.tfvars.json
+Картинка немного поменялась. Из-за ошибки во время rebase пришлось пересоздать ветку:
+![](img/02-git-03-branching-4.png)
 
-- файлы "override.tf", "override.tf.json" и файлы, заканчивающиеся на "_override.tf" и "_override.tf.json":\
-override.tf\
-override.tf.json\
-*_override.tf\
-*_override.tf.json
-
-- файлы ".terraformrc" и "terraform.rc":\
-.terraformrc\
-terraform.rc
+После выполнения rebase получился следующий результат. Есть подозрение, что должно быть не так. Поэтому повторю все действия по новой.
+![](img/02-git-03-branching-5.png)
