@@ -14,3 +14,12 @@
 
 После выполнения rebase получился следующий результат. Есть подозрение, что должно быть не так. Поэтому повторю все действия по новой.
 ![](img/02-git-03-branching-5.png)
+
+Начал выполнять по новой:
+![](img/02-git-03-branching-6.png)
+![](img/02-git-03-branching-7.png)
+![](img/02-git-03-branching-8.png)
+После выполнения rebase:
+![](img/02-git-03-branching-9.png)
+После выполнения merge:
+![](img/02-git-03-branching-10.png)
