@@ -1,0 +1,4 @@
+users:
+  - name: student
+    passwd: student
+    lock_passwd: false
